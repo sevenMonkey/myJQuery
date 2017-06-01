@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .box{
+        height:50px;
+        background-color:red
+      }
+      .active{
+        background-color: green;
+      }
+      .btn{
+        display: block;
+        margin-top: 100px;
+        width: 200px;
+        height: 50px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+  </style>
+</head>
+<body>
+
+  <div id="id" class="box"></div>
+  <button id="btn" class="btn">Click to change the style</button>
+
+  <script src="jquery.js"></script>
+  <script>
+    var $box = $('#id');
+    $box.on('click',function(){
+      console.log('Clicked me');
+    })
+    var $btn = $('#btn');
+    $btn.on('click', function(){
+      $box.addClass('active');
+    } );
+  </script>
+</body>
+</html>
